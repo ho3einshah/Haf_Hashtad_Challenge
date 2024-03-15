@@ -1,5 +1,7 @@
 package com.hafhashtad.network.retrofit.model
 
+import com.hafhashtad.model.Product
+import com.hafhashtad.model.Rating
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -19,12 +21,12 @@ data class NetworkProduct(
     @SerialName("image")
     val image: String?,
     @SerialName("rating")
-    val rating: NetworkRating?
+    val rating: NetworkProductRating?
 
 )
 
 @Serializable
-data class NetworkRating(
+data class NetworkProductRating(
     @SerialName("rate")
     val rate: Float?,
     @SerialName("count")
@@ -32,11 +34,17 @@ data class NetworkRating(
 )
 
 
-//fun NetworkMovie.asExternalModel(): Movie {
-//    return Movie(
-//        id = id,
-//        adult = adult,
-//        imageSubPath = imageSubPath,
-//        title = title
-//    )
-//}
+fun NetworkProduct.asExternalModel(): Product {
+    return Product(
+        id = id,
+        title = title,
+        category = category,
+        price = price,
+        description = description,
+        image = image,
+        rating = Rating(
+            rate = rating?.rate,
+            count = rating?.count
+        )
+    )
+}

@@ -18,7 +18,6 @@ kotlinxCoroutines = "1.7.3"
 hilt = "2.48.1"
 room = "2.6.1"
 ksp = "1.9.0-1.0.13"
-paging = "3.2.1"
 coil = "2.4.0"
 androidxLifecycle = "2.7.0"
 androidxHiltNavigationCompose = "1.1.0"
@@ -51,9 +50,6 @@ hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", v
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
-androidx-paging-common-ktx = { group = "androidx.paging", name = "paging-common-ktx", version.ref = "paging" }
-androidx-paging-runtime = { group = "androidx.paging", name = "paging-runtime", version.ref = "paging" }
-room-paging = { group = "androidx.room", name = "room-paging", version.ref = "room" }
 
 coil-kt = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
 coil-kt-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
@@ -66,7 +62,6 @@ androidx-lifecycle-viewModelCompose = { group = "androidx.lifecycle", name = "li
 androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
 
-androidx-paging-compose = { group = "androidx.paging", name = "paging-compose", version = "paging" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
