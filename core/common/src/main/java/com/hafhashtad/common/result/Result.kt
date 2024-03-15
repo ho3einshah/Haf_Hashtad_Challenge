@@ -1,6 +1,5 @@
 package com.hafhashtad.common.result
 
-import android.database.sqlite.SQLiteConstraintException
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
@@ -9,12 +8,12 @@ import retrofit2.HttpException
 import java.io.EOFException
 import java.io.IOException
 
-private const val DEFAULT_ERROR = "Unknown error"
+private const val DEFAULT_ERROR = "An error occurred"
 
 sealed interface Result<out T> {
     data class Success<T>(val data: T) : Result<T>
 
-    data class Error(val exception: Throwable? = null, val errorMsg: String = "An error occurred") :
+    data class Error(val exception: Throwable? = null, val errorMsg: String = DEFAULT_ERROR) :
         Result<Nothing>
 
     data object Loading : Result<Nothing>
@@ -40,7 +39,6 @@ fun handleError(t: Throwable?): Result.Error {
                 exception = t
             )
 
-        is SQLiteConstraintException -> Result.Error(errorMsg = "SQL Exception", exception = t)
         is HttpException -> {
             Result.Error(
                 errorMsg = DEFAULT_ERROR,
