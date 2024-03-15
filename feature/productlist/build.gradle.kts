@@ -66,4 +66,6 @@ dependencies {
     implementation(libs.coil.kt.svg)
     implementation(libs.coil.kt.svg)
     implementation(libs.androidx.lifecycle.runtimeCompose)
+    implementation(libs.io.mockK)
+    implementation(libs.kotlinx.coroutine.test)
 }
