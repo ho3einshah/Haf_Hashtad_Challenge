@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.hafhashtad.core"
+    namespace = "com.hafhashtad.network"
     compileSdk = 34
 
     defaultConfig {

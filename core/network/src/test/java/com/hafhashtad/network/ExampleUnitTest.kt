@@ -1,4 +1,4 @@
-package com.hafhashtad.core
+package com.hafhashtad.network
 
 import org.junit.Test
 
