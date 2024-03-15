@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Haf Hashtad Code Challenge"
 include(":app")
+include(":core")
