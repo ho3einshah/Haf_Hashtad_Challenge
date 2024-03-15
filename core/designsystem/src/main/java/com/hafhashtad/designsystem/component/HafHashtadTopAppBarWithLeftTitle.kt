@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import com.hafhashtad.designsystem.theme.HafHashtadCodeChallengeTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -37,18 +38,25 @@ fun HafHashtadTopAppBarWithLeftTitle(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-@Preview(uiMode = Configuration.UI_MODE_NIGHT_NO)
+@Preview(uiMode = Configuration.UI_MODE_NIGHT_NO,
+    apiLevel = 33)
 private fun HafHashtadTopAppBarWithLeftTitleLightPreview() {
-    HafHashtadTopAppBarWithLeftTitle(
-        title = "haf hashtad",
-    )
+    HafHashtadCodeChallengeTheme {
+
+        HafHashtadTopAppBarWithLeftTitle(
+            title = "haf hashtad",
+        )
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
+@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES,
+    apiLevel = 33)
 private fun HafHashtadTopAppBarWithLeftTitleDarkPreview() {
-    HafHashtadTopAppBarWithLeftTitle(
-        title = "haf hashtad",
-    )
+    HafHashtadCodeChallengeTheme {
+        HafHashtadTopAppBarWithLeftTitle(
+            title = "haf hashtad",
+        )
+    }
 }

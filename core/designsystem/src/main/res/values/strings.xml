@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="retry">retry</string>
+    <string name="connection_error_title">Seems like there\'s an internet\nconnection problem.</string>
+    <string name="connection_error_description">Seems like there\'s an internet\nconnection problem.</string>
+    <string name="discover">Discover</string>
+</resources>
