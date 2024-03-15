@@ -2,10 +2,12 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
 }
 
 android {
-    namespace = "com.hafhashtad.ui"
+    namespace = "com.hafhashtad.productlist"
     compileSdk = 34
 
     defaultConfig {
@@ -41,25 +43,27 @@ android {
 }
 
 dependencies {
-
-    implementation(project(":core:designsystem"))
+    implementation(project(":core:ui"))
     implementation(project(":core:model"))
-
-    implementation(libs.core.ktx)
-    implementation(libs.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-    implementation(libs.coil.kt)
-    implementation(libs.coil.kt.compose)
-    implementation(libs.coil.video)
-    implementation(libs.coil.gif)
+    implementation(project(":core:domain"))
+    implementation(project(":core:designsystem"))
+    implementation(project(":core:common"))
     implementation(platform(libs.compose.bom))
-    implementation(libs.androidx.lifecycle.runtimeCompose)
-    implementation(libs.androidx.lifecycle.viewModelCompose)
     implementation(libs.ui)
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
+    implementation(libs.core.ktx)
+    implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+    testImplementation(libs.junit)
+    implementation(libs.androidx.hilt.navigation.compose)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.espresso.core)
+    implementation(libs.coil.kt.compose)
+    implementation(libs.coil.kt.svg)
+    implementation(libs.coil.kt.svg)
+    implementation(libs.androidx.lifecycle.runtimeCompose)
 }

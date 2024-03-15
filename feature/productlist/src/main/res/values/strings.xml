@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title">Products</string>
+    <string name="empty_list">Sorry! Product list is Empty</string>
+
+    <string name="item_title_placeholder">title</string>
+    <string name="item_price_placeholder">price</string>
+
+</resources>
